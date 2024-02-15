@@ -2,11 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Nav from "./componenets/common/Nav";
+import Footer from "./componenets/common/Footer";
 import Home from "./componenets/home/Home";
-import About from "./componenets/about/About";
+import About from "./componenets/home/About";
 import Menu from "./componenets/menu/Menu";
 import BookTable from "./componenets/bookTable/BookTable";
 import OrderOnline from "./componenets/orderOnline/OrderOnline";
+import Logo from "./assets/Logo.svg"
 
 const App = () => {
   return (
@@ -18,7 +20,7 @@ const App = () => {
             name="og:description"
             content="A tasty resturant that serves delicious food."
           />
-          <meta name="og:image" content="../src/assets/Logo.svg"/>
+          <meta name="og:image" content={Logo}/>
         </Helmet>
         <Nav />
         <Routes>
@@ -28,6 +30,7 @@ const App = () => {
           <Route path="/book-table" element={<BookTable />} />
           <Route path="/order-online" element={<OrderOnline />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
