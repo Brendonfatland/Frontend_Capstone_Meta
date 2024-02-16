@@ -8,14 +8,14 @@ const LargeImageSection = () => {
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
         style={{ 
           backgroundImage: `url(${backgroundImage})`,
-          backgroundPosition: 'center -636px' // Move the image up by 636 pixels
+          backgroundPosition: 'center -636px' 
         }}
         alt="Chef preparing food"
         aria-hidden="true"
       ></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex items-center text-left">
-          <div className="text-left text-white bg-gray-500 bg-opacity-50 p-4 rounded"> {/* Changed text-center to text-left */}
+          <div className="text-left text-white bg-gray-500 bg-opacity-50 p-4 rounded"> 
             <h2 className="text-3xl font-bold mb-4">Welcome to Little Lemon</h2>
             <p className="text-lg mb-8">Discover our delicious dishes and cozy atmosphere.</p>
             <button

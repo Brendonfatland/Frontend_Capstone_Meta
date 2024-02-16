@@ -3,19 +3,24 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.svg";
 
 const Nav = () => {
+  
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <nav className="bg-gray-800 fixed bottom-0 text-white py-4">
+    <nav className="bg-gray-800 text-white py-4 w-full">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-12 gap-4">
-          {/* Column 1 - Logo (2 columns) */}
           <div className="col-span-2">
             <img src={Logo} alt="Logo" className="h-8" />
           </div>
 
-          {/* Divider (6 columns) */}
           <div className="col-span-6 "></div>
 
-          {/* Column 2 - Navigation links (4 columns) */}
           <div className="col-span-4">
             <ul className="flex justify-end">
               <li>
@@ -27,12 +32,13 @@ const Nav = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/#about"
+                <a
+                  href="/#about"
                   className="text-white hover:text-gray-300 px-3 py-2"
+                  onClick={scrollToAbout}
                 >
-                  About
-                </Link>
+                  about
+                </a>
               </li>
               <li>
                 <Link
